@@ -19,6 +19,7 @@
       align-items: center;
       text-align: center;
       font-family: 'Segoe UI', sans-serif;
+      position: relative;
     }
     .overlay {
       background-color: rgba(0, 0, 0, 0.6);
@@ -32,11 +33,24 @@
     p {
       font-size: 24px;
     }
+    button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
-  <!-- Backsound autoplay dan loop -->
-  <audio src="lebihbaik.mp3" autoplay loop></audio>
+  <audio id="musik" src="lebihbaik.mp3" loop></audio>
+  <button onclick="document.getElementById('musik').play()">🎵 Putar Musik</button>
 
   <div class="overlay">
     <h1>🎓 Selamat Wisuda!</h1>
