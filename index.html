@@ -4,34 +4,42 @@
   <meta charset="UTF-8">
   <title>Selamat Wisuda!</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      color: white;
-      text-align: center;
-      padding-top: 50px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    img {
-      width: 300px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
-      margin-top: 20px;
+    body {
+      background: url('IMG_20241013_221514_509.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6); /* gelapkan sedikit agar teks kelihatan */
+      padding: 40px;
+      border-radius: 20px;
     }
     h1 {
-      font-size: 48px;
+      font-size: 50px;
+      margin-bottom: 20px;
     }
     p {
-      font-size: 22px;
-      margin-top: 10px;
+      font-size: 24px;
     }
   </style>
 </head>
 <body>
-  <h1>🎓 Selamat Wisuda!</h1>
-  <p>Teruntuk sahabat terbaikku,</p>
-  <p>Semoga hari-harimu ke depan seindah tawa kita malam itu 💐</p>
-
-  <img src="IMG_20241013_221514_509.jpg" alt="Foto wisuda bareng">
+  <div class="overlay">
+    <h1>🎓 Selamat Wisuda!</h1>
+    <p>Terima kasih sudah menjadi bagian dari cerita yang indah.</p>
+    <p>Semoga sukses selalu menyertaimu! 💐</p>
+  </div>
 </body>
 </html>
 
