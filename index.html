@@ -20,11 +20,13 @@
       text-align: center;
       font-family: 'Segoe UI', sans-serif;
       position: relative;
+      overflow: hidden;
     }
     .overlay {
       background-color: rgba(0, 0, 0, 0.6);
       padding: 40px;
       border-radius: 20px;
+      z-index: 10;
     }
     h1 {
       font-size: 50px;
@@ -45,6 +47,22 @@
       cursor: pointer;
       font-size: 16px;
       opacity: 0.8;
+      z-index: 10;
+    }
+    .flower {
+      position: absolute;
+      top: -50px;
+      width: 30px;
+      height: 30px;
+      background-image: url('https://i.ibb.co/T1cb8Y9/flower.png');
+      background-size: cover;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
     }
   </style>
 </head>
@@ -57,7 +75,27 @@
     <p>Terima kasih sudah menjadi bagian dari cerita yang indah.</p>
     <p>Semoga sukses selalu menyertaimu! 💐</p>
   </div>
+
+  <script>
+    function createFlower() {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.style.left = Math.random() * 100 + 'vw';
+      flower.style.animationDuration = 3 + Math.random() * 2 + 's';
+      document.body.appendChild(flower);
+
+      setTimeout(() => {
+        flower.remove();
+      }, 5000);
+    }
+
+    // Mulai menampilkan bunga setelah 2 detik
+    setTimeout(() => {
+      setInterval(createFlower, 300);
+    }, 2000);
+  </script>
 </body>
 </html>
+
 
 
